@@ -1,4 +1,4 @@
-import { Permission } from "./shared";
+import { Permission } from "@/shared";
 
 const permission: Permission = Permission.Read;
 

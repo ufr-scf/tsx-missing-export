@@ -1,9 +1,20 @@
 {
-  "extends": "./tsconfig.base.json",
+  "extends": "../tsconfig.base.json",
   "compilerOptions": {
     "rootDir": "./src",
     "outDir": "./build",
-    "tsBuildInfoFile": "./build/.tsbuildinfo"
+    "tsBuildInfoFile": "./build/.tsbuildinfo",
+    "noEmit": true,
+
+    "paths": {
+      "@/shared": ["../shared/src/index.ts"],
+      "@/shared/*": ["../shared/src/*"]
+    }
   },
+  "references": [
+    {
+      "path": "../shared"
+    }
+  ],
   "exclude": ["./build/*/**"]
 }
